@@ -1,0 +1,29 @@
+@mixin icon-body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@mixin pseudo-body {
+  display: inline-block;
+  content: '';
+}
+
+@mixin icon-body-pseudo {
+  @include pseudo-body;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@mixin icon-form-arrow {
+  background-image: svg("form-select-arrow", "[fill]: #{$color--grey}");
+  background-size: 12px;
+}
+
+@mixin icon-form-arrow-red {
+  background-image: svg("form-select-arrow", "[fill]: #{$color--red}");
+  background-size: 12px;
+}

@@ -1,0 +1,32 @@
+$transition-animation: 0.2s ease-in-out;
+
+@mixin trans($animation, $animation2: null, $animation3: null, $animation4: null, $animation5: null) {
+
+  @if $animation5 != null {
+    transition: $animation $transition-animation, $animation2 $transition-animation, $animation3 $transition-animation, $animation4 $transition-animation, $animation5 $transition-animation;
+  }
+  @else if $animation4 != null {
+    transition: $animation $transition-animation, $animation2 $transition-animation, $animation3 $transition-animation, $animation4 $transition-animation;
+  }
+  @else if $animation3 != null {
+    transition: $animation $transition-animation, $animation2 $transition-animation, $animation3 $transition-animation;
+  }
+  @else if $animation2 != null {
+    transition: $animation $transition-animation, $animation2 $transition-animation;
+  }
+  @else if $animation != null {
+    transition: $animation $transition-animation;
+  }
+}
+
+//
+// Double parenthesis for working properly
+// @include animater((color, width));
+//
+//@mixin animater($animations) {
+//  $transition: ();
+//  @each $item in $animations {
+//    $transition: append($transition, unquote('#{$item} #{$transition-animation}'), 'comma');
+//  }
+//  transition: $transition;
+//}

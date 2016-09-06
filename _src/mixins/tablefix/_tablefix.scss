@@ -1,0 +1,50 @@
+@mixin tablefix {
+  display: inline-block;
+  thead {
+    display: inline-block;
+    tr {
+      display: inline-block;
+      th {
+        display: inline-block;
+      }
+    }
+  }
+  tbody {
+    display: inline-block;
+    tr {
+      display: inline-block;
+      td {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@mixin tablefix-full {
+  display: inline-block;
+  width: 100%;
+  thead {
+    display: inline-block;
+    width: 100%;
+    tr {
+      @include dyn-columns-clean;
+      display: inline-block;
+      width: 100%;
+      th {
+        display: inline-block;
+      }
+    }
+  }
+  tbody {
+    display: inline-block;
+    width: 100%;
+    tr {
+      @include dyn-columns-clean;
+      display: inline-block;
+      width: 100%;
+      td {
+        display: inline-block;
+      }
+    }
+  }
+}

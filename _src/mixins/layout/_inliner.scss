@@ -1,0 +1,23 @@
+@mixin inliner {
+  display: inline-block;
+  margin-left: 0;
+  vertical-align: top;
+
+  &:nth-of-type(1n+2) {
+    margin-left: 0;
+
+    @include media($medium-up) {
+      margin-left: -4px;
+    }
+  }
+}
+
+@mixin inline-fix {
+  display: inline-block;
+  &:nth-of-type(1n+2) {
+    margin-left: 0;
+    @include media($medium-up) {
+      margin-left: -4px;
+    }
+  }
+}

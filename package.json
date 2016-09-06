@@ -1,0 +1,54 @@
+{
+  "name": "nets",
+  "version": "1.0.0",
+  "description": "Frontend tool",
+  "main": "build-css.js",
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "node build-css.js",
+    "build:js": "webpack",
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete",
+    "start": "npm run build",
+    "styleguide": "node_modules/sc5-styleguide/bin/styleguide --title \"Styleguide\" --parsers \"{ css: 'postcss' }\" --kss-source \"dist/**/*.css\" --style-source \"dist/**/*.css\" --output styleguide --commonClass \"styleguide-global\" --overview-path \"README.md\" --extraHead \"<style>@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Open+Sans&subset=latin,latin-ext');</style>\"",
+    "styleguide:watch": "npm run styleguide -- --watch --server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm run watch:css & npm run watch:js",
+    "watch:css": "npm run build:css -- --watch --notify",
+    "watch:js": "npm run build:js -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:adaptdk/nets-prototype.git"
+  },
+  "keywords": [
+    "Nets",
+    "Grav",
+    "Sass",
+    "Postcss",
+    "adapt"
+  ],
+  "author": "Adapt",
+  "bugs": {
+    "url": "https://github.com/adaptdk/nets-prototype/issues"
+  },
+  "homepage": "https://github.com/adaptdk/nets-prototype#readme",
+  "devDependencies": {
+    "autoprefixer": "6.2.3",
+    "minimist": "1.2.0",
+    "node-bourbon": "4.2.3",
+    "node-neat": "1.7.2",
+    "node-notifier": "4.4.0",
+    "node-sass": "^3.4.2",
+    "normalize.css": "3.0.3",
+    "npmlog": "2.0.0",
+    "path": "0.12.7",
+    "postcss": "5.0.14",
+    "postcss-calc": "^5.2.0",
+    "postcss-svg": "1.0.4",
+    "sass-loader": "^4.0.1",
+    "stylelint": "3.2.2",
+    "watch": "0.17.1",
+    "webpack": "^1.12.9",
+    "xmldom": "0.1.19"
+  }
+}

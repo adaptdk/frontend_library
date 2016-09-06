@@ -1,0 +1,123 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,700';
+
+/**
+ * Headers
+ *
+ * h1 - First level heading
+ * h2 - Second level heading
+ * h3 - Third level heading
+ *
+ * markup:
+ * <{$modifiers}>{$modifiers}. Heading example</{$modifiers}>
+ *
+ * Styleguide 2.1
+ */
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: $color--grey;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: $color--primary;
+  line-height: 1.2;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1,
+.h1 {
+  margin: 44px 0 12px;
+  font-size: $h1-size;
+  font-weight: 300;
+}
+
+h2,
+.h2 {
+  margin: 37px 0 11px;
+  font-size: $h2-size;
+}
+
+h3,
+.h3 {
+  margin: 23px 0 9px;
+  font-size: $h3-size;
+}
+
+h4,
+.h4 {
+  margin: 25px 0 7px;
+  font-size: $h4-size;
+}
+
+h5,
+.h5 {
+  margin: 26px 0 6px;
+  font-size: $h5-size;
+}
+
+h6,
+.h6 {
+  margin: 26px 0 4px;
+  font-size: $h6-size;
+}
+
+p {
+  font-size: $font-size;
+  font-weight: $slim;
+}
+
+a {
+  color: #337ab7;
+  font-weight: 600;
+  font-style: normal;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #6BABC6;
+  }
+
+  &:visited {
+    color: $color--primary;
+    text-decoration: none;
+  }
+}
+
+.tip {
+  color: $color--grey;
+  font-weight: $slim;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+
+pre {
+  margin: 1rem 0;
+  border-radius: 2px;
+}
+
+blockquote {
+  margin: 0;
+  padding: 1rem 3rem;
+}

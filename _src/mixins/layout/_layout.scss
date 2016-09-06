@@ -1,0 +1,53 @@
+// Max-width works like bourbon neat's outer-container, but have automatic breakpoints.
+@mixin max-width($argument: $max-width) {
+  max-width: $argument * 0.8;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  @include media($full-up) {
+    max-width: $argument;
+  }
+}
+
+// Pane-padding adds a padding in top (and optionally sides), often based of the $gutter: 20px; Apply on the div wrapping the .inner
+@mixin pane-padding($argument: $gutter, $argument2: 0) {
+  transition: padding 0.2s ease-in-out;
+  padding: $argument * 0.75 $argument2;
+
+  @include media($medium-up) {
+    padding: $argument * 0.9 $argument2 * 0.9;
+  }
+  @include media($large-up) {
+    padding: $argument $argument2;
+  }
+}
+
+// Inner-padding adds padding in the sides. It's already places on the .inner, but useful if you have custom naming.
+@mixin inner-padding($argument: $gutter) {
+  padding-left: $argument;
+  padding-right: $argument;
+}
+
+// Inner-padding adds padding in the sides. It's already places on the .inner, but useful if you have custom naming.
+@mixin mobile-padding($argument: 20%) {
+
+  @include media($medium-down) {
+    padding-left: $argument;
+    padding-right: $argument;
+  }
+  @include media($msmall-down) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// A hack for Neat span-columns(Omega).
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) {
+    margin-right: flex-gutter();
+  }
+  &:nth-child(#{$nth}+1) {
+    clear: none
+  }
+}

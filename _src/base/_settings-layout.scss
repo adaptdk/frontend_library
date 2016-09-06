@@ -1,0 +1,83 @@
+/**
+ * IMPORTANT:
+ * Load this file before loading neat, but after loading bourbon.
+ */
+
+@import "neat-helpers";
+
+/**
+ * Overrides
+ */
+$column: 60px;
+$gutter: 20px;
+$under-gutter: 50px;
+$border-radius: 3px;
+$gutter-unit: 20px;
+$grid-columns: 12;
+$max-width: 1400px;
+
+/**
+ * Visual grid
+ */
+$visual-grid: false;
+$visual-grid-color: #ff69b4; /* hotpink */
+$visual-grid-index: back;
+$visual-grid-opacity: 0.5;
+
+/**
+ * Breakpoints
+ */
+$xsmall:        360px;
+$msmall:        480px;
+$small:         640px;
+$medium:        770px;
+$medium-large:  860px;
+$large:         960px;
+$mlarge:        1150px;
+$full:          $max-width;
+$xlarge:        1450px;
+$big:           1800px;
+
+
+/**
+ * Media queries
+ */
+// Xtra Small
+$xsmall-up: new-breakpoint(min-width $xsmall 4);
+$xsmall-down: new-breakpoint(max-width ($xsmall - 1px) 4);
+
+// Medium Small
+$msmall-up: new-breakpoint(min-width $msmall 8);
+$msmall-down: new-breakpoint(max-width ($msmall - 1px) 8);
+
+// Small
+$small-up: new-breakpoint(min-width $small 4);
+$small-down: new-breakpoint(max-width ($small - 1px) 4);
+
+// Medium
+$medium-up: new-breakpoint(min-width $medium 8);
+$medium-down: new-breakpoint(max-width ($medium - 1px) 8);
+
+// Medium - large
+$medium-large-up: new-breakpoint(min-width $medium-large 8);
+$medium-large-down: new-breakpoint(max-width ($medium-large - 1px) 8);
+
+// Large
+$large-up: new-breakpoint(min-width $large 12);
+$large-down: new-breakpoint(max-width ($large - 1px) 12);
+
+// Large
+$mlarge-up: new-breakpoint(min-width $mlarge 12);
+$mlarge-down: new-breakpoint(max-width ($mlarge - 1px) 12);
+
+// Full
+$full-up: new-breakpoint(min-width $full 12);
+$full-down: new-breakpoint(max-width ($full - 1px) 12);
+
+// XLarge
+$xlarge-up: new-breakpoint(min-width $xlarge 12);
+$xlarge-down: new-breakpoint(max-width ($xlarge - 1px) 12);
+
+// Big
+$big-up: new-breakpoint(min-width $big 12);
+$big-down: new-breakpoint(max-width ($big - 1px) 12);
