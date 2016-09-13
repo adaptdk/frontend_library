@@ -22,11 +22,29 @@
 @import "../mixins/layout/inliner";
 @import "../mixins/tablefix/tablefix";
 @import "../mixins/icon-body/icon-body";
-@import "../mixins/dyn-columns/dyn-columns";
+@import "../mixins/dyncol/dyncol";
 @import "../mixins/transition/transition";
+<<<<<<< Updated upstream
+=======
+@import "../mixins/item/item";
+>>>>>>> Stashed changes
 
 /**
  * Components
  */
+@import "../components/slider/slider";
+@import "../components/dyncol/dyncol";
+@import "../components/media/media";
 
+/**
+ * Layouts
+ */
+@import "../layout/header";
+@import "../layout/main";
+@import "../layout/footer";
+
+/**
+ * Vendor
+ */
+@import "../vendor/syntax/scss";
 

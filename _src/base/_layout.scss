@@ -1,34 +1,9 @@
-.page-wrapper {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-
 html {
   height: auto;
 }
 
 body {
   text-align: left;
-
-  &:before {
-    content: "small,medium,large";
-    display: none;
-    @include media($large-down) {
-      content: "large";
-    }
-    @include media($medium-down) {
-      content: "medium";
-    }
-    @include media($small-down) {
-      content: "small";
-    }
-  }
-}
-
-main.main {
-  position: relative;
-  padding: 20px 0;
 }
 
 .element-invisible {
@@ -39,18 +14,4 @@ main.main {
 .inners {
   @include max-width;
   @include inner-padding;
-}
-
-.extra-inner {
-  max-width: 800px;
-  position: relative;
-  display: block;
-  margin: 0 auto;
-}
-
-.main-layout {
-  > section {
-    position: relative;
-    overflow: hidden;
-  }
 }

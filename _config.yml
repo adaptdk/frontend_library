@@ -23,14 +23,6 @@ github_username:  mads-thines
 # Build settings
 markdown: kramdown
 theme: minima
-incremental: true
-
-# Output Dir
-collections:
-  pages:
-    output: true
-    path: _pages
-    permalink: /:title/
 
 exclude:
   - LICENSE
@@ -45,3 +37,5 @@ exclude:
   - webpack.config.js
   - Gemfile
   - Gemfile.lock
+  - feed.xml
+  - params.json

@@ -7,7 +7,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    root: path.resolve('./_src/components')
+    root: path.resolve('./_src')
   },
 };
 

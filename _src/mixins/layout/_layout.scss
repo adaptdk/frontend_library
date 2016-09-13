@@ -24,7 +24,7 @@
 }
 
 // Inner-padding adds padding in the sides. It's already places on the .inner, but useful if you have custom naming.
-@mixin inner-padding($argument: $gutter) {
+@mixin inner-padding($argument: 2rem) {
   padding-left: $argument;
   padding-right: $argument;
 }

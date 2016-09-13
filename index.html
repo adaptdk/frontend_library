@@ -1,4 +1,188 @@
 ---
-layout: page
+layout: default
+title:
+- Flexbox
+- dynCol
+- Workflow
+- Workflow
+- Workflow
+- Workflow
+- Workflow
+- Workflow
+- Workflow
+- Workflow
+- Workflow
+- Workflow
+- Workflow
+- Workflow
+- Workflow
+- Workflow
+- Workflow
 ---
+<<<<<<< Updated upstream
 #### asdf
+=======
+{% if page.title[0] == null %}{% else %}
+<div id="{{ page.title[0] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[0] }}</h2>
+  <div class="code">
+{% highlight css %}
+.wrapper {
+  display: flex;
+}
+.item {
+  flex: 1;
+  margin-right: 1rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}{% endhighlight %}
+  </div>
+  <h6 class="subtitle">Example</h6>
+  <div class="wrapper">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</div>
+{% endif %}
+
+{% if page.title[1] == null %}{% else %}
+<div id="{{ page.title[1] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[1] }}</h2>
+  <div class="code">
+{% highlight css %}
+// dynCol Mixin Usage
+@mixin dyncol {
+  @for $i from 1 through 12 {
+    > *:first-of-type:nth-last-of-type(#{$i}),
+    > *:first-of-type:nth-last-of-type(#{$i}) ~ * {
+      width: calc(100% / #{$i} - #{$margin} + (#{$margin} / #{$i}));
+      margin-left: $margin/2;
+      margin-right: $margin/2;
+      margin-bottom: 0;
+      display: block;
+      float: left;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}{% endhighlight %}
+  </div>
+  <h6 class="subtitle">Example</h6>
+  <div class="wrapper">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</div>
+{% endif %}
+
+{% if page.title[2] == null %}{% else %}
+<div id="{{ page.title[2] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[2] }}</h2>
+</div>
+{% endif %}
+
+{% if page.title[3] == null %}{% else %}
+<div id="{{ page.title[3] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[3] }}</h2>
+</div>
+{% endif %}
+{% if page.title[4] == null %}{% else %}
+<div id="{{ page.title[4] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[4] }}</h2>
+</div>
+{% endif %}
+{% if page.title[5] == null %}{% else %}
+<div id="{{ page.title[5] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[5] }}</h2>
+</div>
+{% endif %}
+{% if page.title[6] == null %}{% else %}
+<div id="{{ page.title[6] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[6] }}</h2>
+</div>
+{% endif %}
+{% if page.title[7] == null %}{% else %}
+<div id="{{ page.title[7] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[7] }}</h2>
+</div>
+{% endif %}
+{% if page.title[8] == null %}{% else %}
+<div id="{{ page.title[8] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[8] }}</h2>
+</div>
+{% endif %}
+{% if page.title[9] == null %}{% else %}
+<div id="{{ page.title[9] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[9] }}</h2>
+</div>
+{% endif %}
+{% if page.title[10] == null %}{% else %}
+<div id="{{ page.title[10] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[10] }}</h2>
+</div>
+{% endif %}
+{% if page.title[11] == null %}{% else %}
+<div id="{{ page.title[11] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[11] }}</h2>
+</div>
+{% endif %}
+{% if page.title[12] == null %}{% else %}
+<div id="{{ page.title[12] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[12] }}</h2>
+</div>
+{% endif %}
+{% if page.title[13] == null %}{% else %}
+<div id="{{ page.title[13] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[13] }}</h2>
+</div>
+{% endif %}
+{% if page.title[14] == null %}{% else %}
+<div id="{{ page.title[14] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[14] }}</h2>
+</div>
+{% endif %}
+{% if page.title[15] == null %}{% else %}
+<div id="{{ page.title[15] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[15] }}</h2>
+</div>
+{% endif %}
+{% if page.title[16] == null %}{% else %}
+<div id="{{ page.title[16] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[16] }}</h2>
+</div>
+{% endif %}
+{% if page.title[17] == null %}{% else %}
+<div id="{{ page.title[17] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[17] }}</h2>
+</div>
+{% endif %}
+{% if page.title[18] == null %}{% else %}
+<div id="{{ page.title[18] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[18] }}</h2>
+</div>
+{% endif %}
+{% if page.title[19] == null %}{% else %}
+<div id="{{ page.title[19] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[19] }}</h2>
+</div>
+{% endif %}
+{% if page.title[20] == null %}{% else %}
+<div id="{{ page.title[20] | slugify: 'pretty' }}" class="slider-element">
+  <h2 class="title">{{ page.title[20] }}</h2>
+</div>
+{% endif %}
+>>>>>>> Stashed changes

@@ -1,5 +1,6 @@
-<header class="site-header" role="banner">
-  <div class="inner">
-
-  </div>
+<header class="header" role="banner">
+  {% for title in page.title %}
+  {% if title == null %}{% else %}
+  <a href="#{{ title | slugify: 'pretty' }}">#{{ title }}</a>{% endif %}
+  {% endfor %}
 </header>
