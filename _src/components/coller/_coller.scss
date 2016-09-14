@@ -1,0 +1,5 @@
+#column {
+  .wrapper {
+    @include coller(4,3,2,1, $large, $small, $msmall, 20px);
+  }
+}
