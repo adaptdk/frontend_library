@@ -1,5 +1,7 @@
 // This mixin creates beautiful columns for the children inside the wrapper
 // 4 Columns, 3 Columns, 2 Columns, 1 Column, 4 Columns as default, 3 Columns at BP1, 2 Columns at BP2, 1 Columns at BP3,
+
+// How to use
 // @include column(4,3,2,1, $large, $small, $msmall, 20px);
 
 // Variables

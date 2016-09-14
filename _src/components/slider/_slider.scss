@@ -26,4 +26,22 @@
       }
     }
   }
+
+  .title {
+    margin-bottom: 1.5rem;
+
+    span {
+      color: lighten($color--grey, 40%);
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 0.1rem;
+      margin-left: 1rem;
+      position: relative;
+      bottom: 4px;
+    }
+  }
+
+  .subtitle {
+    margin-bottom: 0.7rem;
+  }
 }
