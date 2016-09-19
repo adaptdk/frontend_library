@@ -4,12 +4,55 @@
   margin-bottom: 1rem;
   min-height: calc(100vh - 15px);
 
+  .title {
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+
+    span {
+      color: lighten($color--grey, 40%);
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 0.1rem;
+      margin-left: 1rem;
+      position: relative;
+      bottom: 4px;
+    }
+
+    &.collapsed + .code {
+      max-height: 115px;
+
+      .highlight:after {
+        background-image: linear-gradient(0deg, rgba(86, 86, 86, 0.1), #ffffff 25%);
+      }
+    }
+  }
+
+  .subtitle {
+    margin-bottom: 0.7rem;
+  }
+
   p {
     margin-top: 0;
   }
-  .code {
-    display: flex;
 
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: $roboto-mono;
+  }
+
+  pre {
+    margin: 0;
+    border-radius: 2px;
+  }
+
+  .code {
+    margin-bottom: 2rem;
+    display: flex;
+    transition: max-height 0.4s ease;
+    overflow: hidden;
+    max-height: 1000px;
     .left {
       margin-right: 4rem;
     }
@@ -27,21 +70,23 @@
     }
   }
 
-  .title {
-    margin-bottom: 1.5rem;
+  .highlight {
 
-    span {
-      color: lighten($color--grey, 40%);
-      font-size: 1.2rem;
-      font-weight: 300;
-      letter-spacing: 0.1rem;
-      margin-left: 1rem;
-      position: relative;
-      bottom: 4px;
+    padding: 1rem 2rem;
+    margin: 0;
+    border-radius: 0.25rem;
+    width: 100%;
+    border: 1px solid #ececec;
+    &:after {
+      @include pseudo-body;
+      background-image: linear-gradient(0deg, rgba(86, 86, 86, 0.9), #ffffff 25%);
+      transition: background-image 0.4s ease;
     }
   }
 
-  .subtitle {
-    margin-bottom: 0.7rem;
+  blockquote {
+    margin: 0;
+    padding: 1rem 3rem;
   }
+
 }
