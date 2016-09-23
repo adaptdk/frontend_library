@@ -85,13 +85,8 @@ p {
 }
 
 a {
-<<<<<<< Updated upstream
-  color: #337ab7;
-  font-weight: 600;
-=======
   color: $color--white;
   font-weight: 200;
->>>>>>> Stashed changes
   font-style: normal;
   text-decoration: underline;
   cursor: pointer;
@@ -105,42 +100,4 @@ a {
     //color: $color--primary;
     text-decoration: none;
   }
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: $roboto-mono;
-}
-
-pre {
-  margin: 0;
-  border-radius: 2px;
-}
-
-.code {
-  margin-bottom: 2rem;
-}
-
-figure {
-  background: #ffffff;
-  padding: 1rem 2rem;
-  margin: 0;
-  border-radius: 0.25rem;
-  width: 100%;
-  border: 1px solid #ececec;
-}
-
-blockquote {
-  margin: 0;
-  padding: 1rem 3rem;
-}
-
-.title {
-  margin-bottom: 1.5rem;
-}
-
-.subtitle {
-  margin-bottom: 0.7rem;
 }

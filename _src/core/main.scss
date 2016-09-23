@@ -24,10 +24,8 @@
 @import "../mixins/icon-body/icon-body";
 @import "../mixins/dyncol/dyncol";
 @import "../mixins/transition/transition";
-<<<<<<< Updated upstream
-=======
 @import "../mixins/item/item";
->>>>>>> Stashed changes
+@import "../mixins/coller/coller";
 
 /**
  * Components
@@ -35,13 +33,14 @@
 @import "../components/slider/slider";
 @import "../components/dyncol/dyncol";
 @import "../components/media/media";
+@import "../components/coller/coller";
 
 /**
  * Layouts
  */
-@import "../layout/header";
-@import "../layout/main";
-@import "../layout/footer";
+@import "../layout/header/header";
+@import "../layout/main/main";
+@import "../layout/footer/footer";
 
 /**
  * Vendor

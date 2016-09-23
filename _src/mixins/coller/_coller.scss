@@ -2,6 +2,7 @@
 // 4 Columns, 3 Columns, 2 Columns, 1 Column, 4 Columns as default, 3 Columns at BP1, 2 Columns at BP2, 1 Columns at BP3,
 
 // How to use
+<<<<<<< HEAD
 // @include column(4,3,2,1, $large, $small, $msmall, 20px);
 
 // Variables
@@ -12,16 +13,34 @@ $margin4: $margin1 / 1.75;
 $breakpoint1: $large;
 $breakpoint2: $small;
 $breakpoint3: $msmall;
+=======
+// @include coller(4,3,2,1, 20px, $large, $medium, $small);
+// Or
+// @include coller;
+
+// Variables
+$margin1: 20px;
+$margin2: $margin1 / 1.2;
+$margin3: $margin1 / 1.4;
+$margin4: $margin1 / 1.6;
+>>>>>>> develop
 
 @mixin coller(
   $var1: 4,
   $var2: 3,
   $var3: 2,
   $var4: 1,
+<<<<<<< HEAD
   $breakpoint1: $breakpoint1,
   $breakpoint2: $breakpoint2,
   $breakpoint3: $breakpoint3,
   $margin1: $margin1) {
+=======
+  $margin1: $margin1,
+  $breakpoint1: $large,
+  $breakpoint2: $medium,
+  $breakpoint3: $small) {
+>>>>>>> develop
   > * {
     display: block;
     float: left;
