@@ -1,0 +1,136 @@
+// This mixin creates beautiful columns for the children inside the wrapper
+// 4 Columns, 3 Columns, 2 Columns, 1 Column, 4 Columns as default, 3 Columns at BP1, 2 Columns at BP2, 1 Columns at BP3,
+
+// How to use
+// @include column(4,3,2,1, $large, $small, $msmall, 20px);
+
+// Variables
+$margin1: 30px;
+$margin2: $margin1 / 1.25;
+$margin3: $margin1 / 1.5;
+$margin4: $margin1 / 1.75;
+$breakpoint1: $large;
+$breakpoint2: $small;
+$breakpoint3: $msmall;
+
+@mixin coller(
+  $var1: 4,
+  $var2: 3,
+  $var3: 2,
+  $var4: 1,
+  $breakpoint1: $breakpoint1,
+  $breakpoint2: $breakpoint2,
+  $breakpoint3: $breakpoint3,
+  $margin1: $margin1) {
+  > * {
+    display: block;
+    float: left;
+
+    @media screen and (min-width: $breakpoint1 - 1px) {
+      margin-right: $margin1;
+      margin-bottom: $margin1;
+      width: calc(((100% - (#{$var1} - 1) * #{$margin1})) / #{$var1});
+
+      &:nth-child(#{$var1}n + #{$var1}) {
+        margin-right: 0;
+      }
+
+      &:nth-child(#{$var1}n+1) {
+        clear: left;
+      }
+    }
+
+    // Breakpoint 1 - Change Columns
+    @media screen and (min-width: $breakpoint2) and (max-width: $breakpoint1 - 1px) {
+      margin-right: $margin2;
+      margin-bottom: $margin2;
+      width: calc(((100% - (#{$var2} - 1) * #{$margin2})) / #{$var2});
+
+      &:nth-child(#{$var1}n + #{$var1}) {
+        margin-right: $margin2;
+      }
+
+      &:nth-child(#{$var2}n + #{$var2}) {
+        margin-right: 0;
+      }
+
+      &:nth-child(#{$var1}n+1) {
+        clear: none;
+      }
+
+      &:nth-child(#{$var2}n+1) {
+        clear: left;
+      }
+    }
+
+    // Breakpoint 2 - Change Columns
+    @media screen and (min-width: $breakpoint3) and (max-width: $breakpoint2 - 1px) {
+      margin-right: $margin3;
+      margin-bottom: $margin3;
+      width: calc(((100% - (#{$var3} - 1) * #{$margin3})) / #{$var3});
+
+      &:nth-child(#{$var2}n + #{$var2}) {
+        margin-right: $margin3;
+      }
+
+      &:nth-child(#{$var3}n + #{$var3}) {
+        margin-right: 0;
+      }
+
+      &:nth-child(#{$var2}n+1) {
+        clear: none;
+      }
+
+      &:nth-child(#{$var3}n+1) {
+        clear: left;
+      }
+    }
+
+    // Breakpoint 3 - Change Columns
+    @media screen and (max-width: $breakpoint3 - 1px) {
+      margin-right: $margin4;
+      margin-bottom: $margin4;
+      width: calc(((100% - (#{$var4} - 1) * #{$margin4})) / #{$var4});
+
+      &:nth-child(#{$var3}n + #{$var3}) {
+        margin-right: $margin4;
+      }
+
+      &:nth-child(#{$var4}n + #{$var4}) {
+        margin-right: 0;
+      }
+
+      &:nth-child(#{$var3}n+1) {
+        clear: none;
+      }
+
+      &:nth-child(#{$var4}n+1) {
+        clear: left;
+      }
+    }
+  }
+}
+
+@mixin coller-one($var: 4) {
+  > * {
+    display: block;
+    float: left;
+    width: calc(((100% - (#{$var} - 1) * #{$margin1})) / #{$var});
+    margin-right: $margin1;
+    margin-bottom: $margin1;
+
+    &:nth-child(#{$var}n + #{$var}) {
+      margin-right: 0;
+    }
+
+    &:nth-child(#{$var}n+1) {
+      clear: left;
+    }
+  }
+}
+
+@mixin coller-one-reset($var: 4) {
+  &:nth-child(#{$var}n + #{$var}) {
+    margin-right: $margin1;
+  }
+}

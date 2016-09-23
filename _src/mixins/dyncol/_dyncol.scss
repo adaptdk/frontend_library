@@ -4,7 +4,7 @@ $margin: 20px;
 // An flexbox like compatible dynamic column creator.
 // Include Mixin on wrapper for children to justify.
 // dynCol Mixin Usage
-@mixin dyncol {
+@mixin dyncol($margin: $margin) {
   @for $i from 1 through 12 {
     > *:first-of-type:nth-last-of-type(#{$i}),
     > *:first-of-type:nth-last-of-type(#{$i}) ~ * {
@@ -26,7 +26,7 @@ $margin: 20px;
 }
 
 // dynCol Mixin Usage with display: inline-block with a minus margin hack.
-@mixin dyncol-inline {
+@mixin dyncol-inline($margin: $margin) {
   @for $i from 1 through 12 {
     > *:first-of-type:nth-last-of-type(#{$i}),
     > *:first-of-type:nth-last-of-type(#{$i}) ~ * {
@@ -48,7 +48,7 @@ $margin: 20px;
 }
 
 // dynCol Mixin Usage with display: inline-block with no fix. Useful if you've compressed/minified your HTML.
-@mixin dyncol-minified {
+@mixin dyncol-minified($margin: $margin) {
   @for $i from 1 through 12 {
     > *:first-of-type:nth-last-of-type(#{$i}),
     > *:first-of-type:nth-last-of-type(#{$i}) ~ * {
