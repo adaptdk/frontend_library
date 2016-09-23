@@ -1,5 +1,12 @@
-#column {
+#coller {
+  .code {
+    max-height: 3000px;
+    transition: max-height 1s ease;
+    &.collapsed {
+      max-height: 115px;
+    }
+  }
   .wrapper {
-    @include coller(4,3,2,1, $large, $small, $msmall, 20px);
+    @include coller(4, 3, 2, 1, $large, $small, $msmall, 20px);
   }
 }

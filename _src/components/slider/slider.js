@@ -2,12 +2,14 @@ module.exports = function slider() {
   (function ($) {
 
     $(function () {
-      var $title = $('.title');
-      $title.click(function () {
-        if ($(this).hasClass('collapsed')) {
-          $(this).removeClass('collapsed');
+      var $fold = $('.fold');
+      var $code = $('.code, .usage');
+
+      $fold.click(function () {
+        if ($(this).prev($code).hasClass('collapsed')) {
+          $(this).prev($code).removeClass('collapsed');
         } else {
-          $(this).addClass('collapsed');
+          $(this).prev($code).addClass('collapsed');
         }
       });
     });
