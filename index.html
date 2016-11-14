@@ -19,10 +19,10 @@ $var1: 4,
 $var2: 3,
 $var3: 2,
 $var4: 1,
-$breakpoint1: $breakpoint1,
-$breakpoint2: $breakpoint2,
-$breakpoint3: $breakpoint3,
-$margin1: $margin1) {
+$margin1: 20px,
+$breakpoint1: $large,
+$breakpoint2: $medium,
+$breakpoint3: $small) {
   > * {
     display: block;
     float: left;
@@ -117,7 +117,7 @@ $margin1: $margin1) {
       <div class="usage ">
 {% highlight css %}
 .wrapper {
-  @include coller(4,3,2,1, $large, $small, $msmall, 20px);
+  @include coller(4,3,2,1, 20px, $large, $medium, $small);
 }{% endhighlight %}
       </div>
       <h6 class="subtitle">Example</h6>
@@ -182,7 +182,7 @@ $margin1: $margin1) {
     <div class="inner">
       <h2 class="title">{{ page.title[2] }}<span>goo.gl/9MT8Vc</span></h2>
       <h6>SCSS</h6>
-      <div class="code collapsed">
+      <div class="code">
 {% highlight css %}
 // dynCol Mixin Usage
 @mixin dyncol {

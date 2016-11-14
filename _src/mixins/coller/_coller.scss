@@ -6,18 +6,12 @@
 // Or
 // @include coller;
 
-// Variables
-$margin1: 20px;
-$margin2: $margin1 / 1.2;
-$margin3: $margin1 / 1.4;
-$margin4: $margin1 / 1.6;
-
 @mixin coller(
   $var1: 4,
   $var2: 3,
   $var3: 2,
   $var4: 1,
-  $margin1: $margin1,
+  $margin: 20px,
   $breakpoint1: $large,
   $breakpoint2: $medium,
   $breakpoint3: $small) {
@@ -26,9 +20,9 @@ $margin4: $margin1 / 1.6;
     float: left;
 
     @media screen and (min-width: $breakpoint1 - 1px) {
-      margin-right: $margin1;
-      margin-bottom: $margin1;
-      width: calc(((100% - (#{$var1} - 1) * #{$margin1})) / #{$var1});
+      margin-right: $margin;
+      margin-bottom: $margin;
+      width: calc(((100% - (#{$var1} - 1) * #{$margin})) / #{$var1});
 
       &:nth-child(#{$var1}n + #{$var1}) {
         margin-right: 0;
@@ -41,12 +35,12 @@ $margin4: $margin1 / 1.6;
 
     // Breakpoint 1 - Change Columns
     @media screen and (min-width: $breakpoint2) and (max-width: $breakpoint1 - 1px) {
-      margin-right: $margin2;
-      margin-bottom: $margin2;
-      width: calc(((100% - (#{$var2} - 1) * #{$margin2})) / #{$var2});
+      margin-right: $margin/(4/3);
+      margin-bottom: $margin/(4/3);
+      width: calc(((100% - (#{$var2} - 1) * #{$margin/(4/3)})) / #{$var2});
 
       &:nth-child(#{$var1}n + #{$var1}) {
-        margin-right: $margin2;
+        margin-right: $margin/(4/3);
       }
 
       &:nth-child(#{$var2}n + #{$var2}) {
@@ -64,12 +58,12 @@ $margin4: $margin1 / 1.6;
 
     // Breakpoint 2 - Change Columns
     @media screen and (min-width: $breakpoint3) and (max-width: $breakpoint2 - 1px) {
-      margin-right: $margin3;
-      margin-bottom: $margin3;
-      width: calc(((100% - (#{$var3} - 1) * #{$margin3})) / #{$var3});
+      margin-right: $margin/(5/3);
+      margin-bottom: $margin/(5/3);
+      width: calc(((100% - (#{$var3} - 1) * #{$margin/(5/3)})) / #{$var3});
 
       &:nth-child(#{$var2}n + #{$var2}) {
-        margin-right: $margin3;
+        margin-right: $margin/(5/3);
       }
 
       &:nth-child(#{$var3}n + #{$var3}) {
@@ -87,12 +81,12 @@ $margin4: $margin1 / 1.6;
 
     // Breakpoint 3 - Change Columns
     @media screen and (max-width: $breakpoint3 - 1px) {
-      margin-right: $margin4;
-      margin-bottom: $margin4;
-      width: calc(((100% - (#{$var4} - 1) * #{$margin4})) / #{$var4});
+      margin-right: $margin/(6/3);
+      margin-bottom: $margin/(6/3);
+      width: calc(((100% - (#{$var4} - 1) * #{$margin/(6/3)})) / #{$var4});
 
       &:nth-child(#{$var3}n + #{$var3}) {
-        margin-right: $margin4;
+        margin-right: $margin/(6/3);
       }
 
       &:nth-child(#{$var4}n + #{$var4}) {
@@ -107,11 +101,5 @@ $margin4: $margin1 / 1.6;
         clear: left;
       }
     }
-  }
-}
-
-@mixin coller-one-reset($var: 4) {
-  &:nth-child(#{$var}n + #{$var}) {
-    margin-right: $margin1;
   }
 }

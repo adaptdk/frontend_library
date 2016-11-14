@@ -27,11 +27,11 @@ $visual-grid-opacity: 0.5;
 /**
  * Breakpoints
  */
-$xsmall:        360px;
-$msmall:        480px;
-$small:         640px;
+$xsmall:        320px;
+$small:         380px;
+$msmall:        510px;
 $medium:        770px;
-$medium-large:  860px;
+$mmedium:       860px;
 $large:         960px;
 $mlarge:        1150px;
 $full:          $max-width;
@@ -46,21 +46,21 @@ $big:           1800px;
 $xsmall-up: new-breakpoint(min-width $xsmall 4);
 $xsmall-down: new-breakpoint(max-width ($xsmall - 1px) 4);
 
-// Medium Small
-$msmall-up: new-breakpoint(min-width $msmall 8);
-$msmall-down: new-breakpoint(max-width ($msmall - 1px) 8);
-
 // Small
 $small-up: new-breakpoint(min-width $small 4);
 $small-down: new-breakpoint(max-width ($small - 1px) 4);
+
+// Medium Small
+$msmall-up: new-breakpoint(min-width $msmall 8);
+$msmall-down: new-breakpoint(max-width ($msmall - 1px) 8);
 
 // Medium
 $medium-up: new-breakpoint(min-width $medium 8);
 $medium-down: new-breakpoint(max-width ($medium - 1px) 8);
 
 // Medium - large
-$medium-large-up: new-breakpoint(min-width $medium-large 8);
-$medium-large-down: new-breakpoint(max-width ($medium-large - 1px) 8);
+$mmedium-up: new-breakpoint(min-width $mmedium 8);
+$mmedium-down: new-breakpoint(max-width ($mmedium - 1px) 8);
 
 // Large
 $large-up: new-breakpoint(min-width $large 12);
