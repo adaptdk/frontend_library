@@ -1,5 +1,5 @@
 {
-  "name": "nets",
+  "name": "feLibrary",
   "version": "1.0.0",
   "description": "Frontend tool",
   "main": "build-css.js",
@@ -16,23 +16,8 @@
     "watch:css": "npm run build:css -- --watch --notify",
     "watch:js": "npm run build:js -- --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com:adaptdk/nets-prototype.git"
-  },
-  "keywords": [
-    "Nets",
-    "Grav",
-    "Sass",
-    "Postcss",
-    "adapt"
-  ],
-  "author": "Adapt",
-  "bugs": {
-    "url": "https://github.com/adaptdk/nets-prototype/issues"
-  },
-  "homepage": "https://github.com/adaptdk/nets-prototype#readme",
   "devDependencies": {
+    "adapt-mixins": "git+ssh://git@github.com:adaptdk/adapt-mixins.git#master",
     "autoprefixer": "6.2.3",
     "minimist": "1.2.0",
     "node-bourbon": "4.2.3",
