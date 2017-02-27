@@ -1,103 +1,92 @@
-@import "../vendor/fonts/fonts";
+// Importing fonts
+//@import "fonts";
 
-
-/**
- * Headers
- *
- * h1 - First level heading
- * h2 - Second level heading
- * h3 - Third level heading
- *
- * markup:
- * <{$modifiers}>{$modifiers}. Heading example</{$modifiers}>
- *
- * Styleguide 2.1
- */
-
+// General
 body {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: $color--white;
-  font-family: $roboto;
+  color: $color--black;
+  font-size: $font-size;
+  line-height: 1.2;
 }
 
+// Headers
 h1,
-.h1,
 h2,
-.h2,
 h3,
-.h3,
 h4,
-.h4,
 h5,
-.h5,
-h6,
-.h6 {
-  font-family: $titillium-web;
-  font-weight: 100;
-  color: $color--primary;
-  line-height: 1.2;
+h6 {
+}
 
-  &:first-child {
-    margin-top: 0;
+h1 {
+  font-size: $h1-size;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+
+  @include media($medium-down) {
+    font-size: $h1-size * 0.85;
   }
 }
 
-h1,
-.h1 {
-  margin: 44px 0 12px;
-  font-size: $h1-size;
-}
-
-h2,
-.h2 {
-  margin: 37px 0 11px;
+h2 {
   font-size: $h2-size;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+
+  @include media($medium-down) {
+    font-size: $h2-size * 0.85;
+  }
 }
 
-h3,
-.h3 {
-  margin: 23px 0 9px;
+h3 {
   font-size: $h3-size;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+
+  @include media($medium-down) {
+    font-size: $h3-size * 0.85;
+  }
 }
 
-h4,
-.h4 {
-  margin: 25px 0 7px;
+h4 {
   font-size: $h4-size;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+
+  @include media($medium-down) {
+    font-size: $h4-size * 0.85;
+  }
 }
 
-h5,
-.h5 {
-  margin: 26px 0 6px;
+h5 {
   font-size: $h5-size;
+  margin-top: 1rem;
+  margin-bottom: 0;
+
+  @include media($medium-down) {
+    font-size: $h5-size * 0.9;
+  }
 }
 
-h6,
-.h6 {
-  margin: 26px 0 4px;
+h6 {
   font-size: $h6-size;
-}
+  margin-top: 1rem;
+  margin-bottom: 0;
 
-p {
-  font-size: $font-size;
-  font-weight: $slim;
+  @include media($medium-down) {
+    font-size: $h6-size * 0.9;
+  }
 }
 
 a {
-  color: $color--white;
-  font-weight: 200;
-  font-style: normal;
-  text-decoration: underline;
   cursor: pointer;
+  text-decoration: underline;
+}
 
-  &:hover,
-  &:focus {
-    //color: #6BABC6;
-  }
-
-  &:visited {
-    //color: $color--primary;
-    text-decoration: none;
-  }
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }

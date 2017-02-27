@@ -3,7 +3,7 @@ var StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: {
-    bundle: './_src/core/main.scss'
+    main: ['./_src/core/main.scss', './_src/core/main.js']
   },
   output: {
     filename: 'bundle.js',
@@ -23,11 +23,7 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap&-url!postcss-loader?sourceMap!sass?sourceMap', 'stylelint')
-      },
-      // {
-      //   test: /\.js$/,
-      //   loader: 'webpack'
-      // }
+      }
     ]
   },
   postcss: [

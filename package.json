@@ -8,10 +8,12 @@
     "watch": "webpack --colors --watch",
     "install:styleguide": "npm install sc5-styleguide@^1.5.0",
     "build:styleguide": "styleguide --kss-source 'src/*.scss' --kss-source 'src/*/*.scss' --kss-source 'src/*/*/*.scss' --style-source 'dist/*.css' --overviewPath 'README.md' --output styleguide --watch --server"
-},
+  },
   "devDependencies": {
     "adapt-mixins": "^1.0.5",
     "autoprefixer": "6.5.3",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
     "css-loader": "0.25.0",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "^0.9.0",
