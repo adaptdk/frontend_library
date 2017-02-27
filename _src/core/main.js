@@ -1,3 +1,2 @@
 // Components
-require('components/slider/slider')();
-require('components/media/media')();
+require('../components/component/media.js')();

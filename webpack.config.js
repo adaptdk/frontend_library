@@ -1,13 +1,44 @@
-var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
-  entry: './_src/core/main.js',
+  entry: {
+    bundle: './_src/core/main.scss'
+  },
   output: {
-    path: './dist',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: __dirname + '/dist'
   },
-  resolve: {
-    root: path.resolve('./_src')
+  plugins: [
+    new ExtractTextPlugin('[name].css')
+    // new ExtractTextPlugin('[name].css'),
+    //   new StyleLintPlugin({
+    //     context: './src/',
+    //     files: '**/*.scss',
+    //     failOnError: false
+    //   })
+  ],
+  module: {
+    loaders: [
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap&-url!postcss-loader?sourceMap!sass?sourceMap', 'stylelint')
+      },
+      // {
+      //   test: /\.js$/,
+      //   loader: 'webpack'
+      // }
+    ]
   },
+  postcss: [
+    require('autoprefixer')({
+      browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1'],
+      remove: true
+    }),
+    require('postcss-inline-svg')({
+      path: './_src/images'
+    }),
+    require('postcss-calc')()
+  ]
 };
 

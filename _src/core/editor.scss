@@ -1,28 +1,34 @@
 @import "../../node_modules/normalize.css/normalize";
-/**
- * Settings and base
- */
-@import "bourbon";
-@import "../mixins/layout/layout";
-@import "../base/settings-layout";
-@import "neat";
-@import "../base/settings-color";
-@import "../base/settings-typography";
-@import "../base/typography";
-@import "../base/layout";
 
 /**
  * Mixins
  */
-//@import "../mixins/buttons/buttons";
+@import "~adapt-mixins/src/mixins/mixins.scss";
+
+
+/**
+ * Settings and base
+ */
+@import "../base/settings-color";
+@import "../base/settings-layout";
+@import "../base/settings-typography";
+@import "../base/typography";
+@import "../base/utility";
+
 
 /**
  * Components
  */
-//@import "../components/view/view";
+// @import "../components/";
+
 
 /**
- * Layout elements
+ * Layouts
  */
-//@import "../layout/footer";
+// @import "../layout/";
+@import "../layout/base/layout";
+
+/**
+ * Vendor
+ */
 

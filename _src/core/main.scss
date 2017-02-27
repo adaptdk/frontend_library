@@ -1,49 +1,34 @@
 @import "../../node_modules/normalize.css/normalize";
 
 /**
+ * Mixins
+ */
+@import "~adapt-mixins/src/mixins/mixins.scss";
+
+
+/**
  * Settings and base
  */
-@import "bourbon";
-@import "../mixins/layout/layout";
-@import "../base/settings-layout";
-@import "neat";
-@import "../../node_modules/adapt-mixins/src/adapt-mixins";
 @import "../base/settings-color";
+@import "../base/settings-layout";
 @import "../base/settings-typography";
 @import "../base/typography";
 @import "../base/utility";
-@import "../base/layout";
 
-/**
- * Mixins
- */
-@import "../mixins/fixes/fixes";
-@import "../mixins/forms/forms";
-@import "../mixins/layout/layout";
-@import "../mixins/inliner/inliner";
-@import "../mixins/tablefix/tablefix";
-@import "../mixins/icon-body/icon-body";
-@import "../mixins/dyncol/dyncol";
-@import "../mixins/item/item";
-@import "../mixins/coller/coller";
 
 /**
  * Components
  */
-@import "../components/slider/slider";
-@import "../components/dyncol/dyncol";
-@import "../components/media/media";
-@import "../components/coller/coller";
+// @import "../components/";
+
 
 /**
  * Layouts
  */
-@import "../layout/header/header";
-@import "../layout/main/main";
-@import "../layout/footer/footer";
+// @import "../layout/";
+@import "../layout/base/layout";
 
 /**
  * Vendor
  */
-@import "../vendor/syntax/scss";
 
