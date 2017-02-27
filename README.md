@@ -1,6 +1,18 @@
 # Frontend Library
 
-## Mixins
+## Styling 
+### Setup 
+```
+npm install
+```
 
-(Coller)[coller]
-(dynCol)
+### Compile 
+```
+npm run watch
+```
+
+## Jekyll
+- Make sure you have installed jekyll, then run
+```
+jekyll serve
+```
